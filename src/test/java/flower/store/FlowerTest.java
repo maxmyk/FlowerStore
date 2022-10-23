@@ -47,17 +47,18 @@ public class FlowerTest {
         int notAMagicFour = 4;
         int notAMagicThree = 3;
         double notAMagicThreeF = 3.0;
+        double notAMagicTwoF = 2.0;
         Store s = new Store();
         FlowerBucket a = new FlowerBucket();
         a.add(new FlowerPack(new Flower(FlowerType.TULIP), notAMagicFour));
-        a.add(new FlowerPack(new Flower(FlowerType.ROSE, 2.0,
+        a.add(new FlowerPack(new Flower(FlowerType.ROSE, notAMagicTwoF,
                 notAMagicThreeF), 1));
         a.add(new FlowerPack(new Flower(FlowerType.ROSE), notAMagicThree));
         a.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), notAMagicFour));
         s.add(a);
         FlowerBucket b = new FlowerBucket();
         b.add(new FlowerPack(new Flower(FlowerType.TULIP), 2));
-        b.add(new FlowerPack(new Flower(FlowerType.ROSE, 2.0,
+        b.add(new FlowerPack(new Flower(FlowerType.ROSE, notAMagicTwoF,
                 notAMagicThreeF), 1));
         b.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), notAMagicThree));
         s.add(b);
@@ -70,9 +71,9 @@ public class FlowerTest {
                 "sepalLength=3.0, color=#FF0000, flowerType=ROSE), "
                 +
                 "amount=1)]", s.search(
-                new Flower(FlowerType.ROSE, 2.0,
-                        3.0)).toString());
+                new Flower(FlowerType.ROSE, notAMagicTwoF,
+                        notAMagicThreeF)).toString());
         Assertions.assertTrue(s.searchBool(new Flower(FlowerType.ROSE,
-                2.0, 3.0)));
+                notAMagicTwoF, notAMagicThreeF)));
     }
 }
