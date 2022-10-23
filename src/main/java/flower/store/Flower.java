@@ -3,6 +3,7 @@ package flower.store;
 import lombok.Getter;
 import lombok.Setter;
 
+@Getter
 @Setter
 public class Flower {
     public Flower() {
@@ -10,32 +11,30 @@ public class Flower {
 
     public Flower(FlowerType type) {
         switch (type) {
-            case CHAMOMILE -> {
+            case CHAMOMILE: {
                 this.setFlowerType(FlowerType.CHAMOMILE);
                 this.setColor(FlowerColor.WHITE);
             }
-            case TULIP -> {
+            case TULIP: {
                 this.flowerType = FlowerType.TULIP;
                 this.setColor(FlowerColor.BLUE);
             }
-            case ROSE -> {
+            case ROSE: {
                 this.flowerType = FlowerType.ROSE;
                 this.setColor(FlowerColor.RED);
             }
-            default -> throw new IllegalStateException("Unexpected value: " + type);
+            default:
+                throw new IllegalStateException("Unexpected value: " + type);
         }
     }
 
-    public void setFlowerType(FlowerType flowerType) {
-        this.flowerType = flowerType;
+    public void setFlowerType(FlowerType flType) {
+        this.flowerType = flType;
     }
 
-    @Getter
     private double sepalLength;
     private FlowerColor color;
-    @Getter
     private double price;
-    @Getter
     private FlowerType flowerType;
 
     public String getColor() {
@@ -43,9 +42,9 @@ public class Flower {
     }
 //    public void createFlower(){
 //        switch (flowerType){
-//            case CHAMOMILE -> new Flower().setFlowerType(FlowerType.CHAMOMILE);
-//            case ROSE -> new Flower().setFlowerType(FlowerType.ROSE);
-//            case TULIP -> new Flower().setFlowerType(FlowerType.TULIP);
+//           case CHAMOMILE->new Flower().setFlowerType(FlowerType.CHAMOMILE);
+//           case ROSE -> new Flower().setFlowerType(FlowerType.ROSE);
+//           case TULIP -> new Flower().setFlowerType(FlowerType.TULIP);
 //        }
 //    }
 
