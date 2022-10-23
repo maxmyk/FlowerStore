@@ -33,10 +33,12 @@ public class FlowerTest {
 
     @Test
     public void testFlowerBucket() {
+        int notAMagicFoura = 4;
+        int notAMagicThreea = 3;
         FlowerBucket a = new FlowerBucket();
-        a.add(new FlowerPack(new Flower(FlowerType.TULIP), 4));
-        a.add(new FlowerPack(new Flower(FlowerType.ROSE), 3));
-        a.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), 4));
+        a.add(new FlowerPack(new Flower(FlowerType.TULIP), notAMagicFoura));
+        a.add(new FlowerPack(new Flower(FlowerType.ROSE), notAMagicThreea));
+        a.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), notAMagicFoura));
         Assertions.assertTrue(a.getPrice() > -1);
     }
 

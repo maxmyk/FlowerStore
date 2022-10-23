@@ -19,7 +19,7 @@ public class Store {
     public List<FlowerPack> search(Flower flower) {
         List<FlowerPack> ans = new ArrayList<FlowerPack>();
         for (FlowerBucket bucket : buckets) {
-            for (FlowerPack pack : bucket.packs) {
+            for (FlowerPack pack : bucket.getPacks()) {
                 if ((pack.getFlower().getFlowerType()
                         ==
                         flower.getFlowerType())

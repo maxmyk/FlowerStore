@@ -21,26 +21,26 @@ public class Flower {
     }
 
     public Flower(FlowerType type) {
-        double price1 = new Random().nextDouble() * MAX_PRICE;
-        double sepalLength1 = new Random().nextDouble() * MAX_SEP_LEN;
+        double pricea = new Random().nextDouble() * MAX_PRICE;
+        double sepalLengtha = new Random().nextDouble() * MAX_SEP_LEN;
         switch (type) {
             case CHAMOMILE:
                 this.setFlowerType(FlowerType.CHAMOMILE);
                 this.setColor(FlowerColor.WHITE);
-                this.setPrice(price1);
-                this.setSepalLength(sepalLength1);
+                this.setPrice(pricea);
+                this.setSepalLength(sepalLengtha);
                 break;
             case TULIP:
                 this.flowerType = FlowerType.TULIP;
                 this.setColor(FlowerColor.BLUE);
-                this.setPrice(price1);
-                this.setSepalLength(sepalLength1);
+                this.setPrice(pricea);
+                this.setSepalLength(sepalLengtha);
                 break;
             case ROSE:
                 this.flowerType = FlowerType.ROSE;
                 this.setColor(FlowerColor.RED);
-                this.setPrice(price1);
-                this.setSepalLength(sepalLength1);
+                this.setPrice(pricea);
+                this.setSepalLength(sepalLengtha);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
@@ -48,25 +48,25 @@ public class Flower {
     }
 
     public Flower(FlowerType type, double price) {
-        double sepalLength2 = new Random().nextDouble() * MAX_SEP_LEN;
+        double sepalLengthb = new Random().nextDouble() * MAX_SEP_LEN;
         switch (type) {
             case CHAMOMILE:
                 this.setFlowerType(FlowerType.CHAMOMILE);
                 this.setColor(FlowerColor.WHITE);
                 this.setPrice(price);
-                this.setSepalLength(sepalLength2);
+                this.setSepalLength(sepalLengthb);
                 break;
             case TULIP:
                 this.flowerType = FlowerType.TULIP;
                 this.setColor(FlowerColor.BLUE);
                 this.setPrice(price);
-                this.setSepalLength(sepalLength2);
+                this.setSepalLength(sepalLengthb);
                 break;
             case ROSE:
                 this.flowerType = FlowerType.ROSE;
                 this.setColor(FlowerColor.RED);
                 this.setPrice(price);
-                this.setSepalLength(sepalLength2);
+                this.setSepalLength(sepalLengthb);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
