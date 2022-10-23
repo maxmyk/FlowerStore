@@ -6,6 +6,11 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Flower {
+    private double price;
+    private double sepalLength;
+    private FlowerColor color;
+    private FlowerType flowerType;
+
     public Flower() {
     }
 
@@ -31,11 +36,6 @@ public class Flower {
     public void setFlowerType(FlowerType flType) {
         this.flowerType = flType;
     }
-
-    private double price;
-    private double sepalLength;
-    private FlowerColor color;
-    private FlowerType flowerType;
 
     public String getColor() {
         return color.toString();
