@@ -20,11 +20,16 @@ public class Store {
         List<FlowerPack> ans = new ArrayList<FlowerPack>();
         for (FlowerBucket bucket : buckets) {
             for (FlowerPack pack : bucket.packs) {
-                if ((pack.getFlower().getFlowerType() ==
-                        flower.getFlowerType()) &&
-                        (pack.getFlower().getSepalLength() ==
-                                flower.getSepalLength()) &&
-                        (pack.getFlower().getPrice() ==
+                if ((pack.getFlower().getFlowerType()
+                        ==
+                        flower.getFlowerType())
+                        &&
+                        (pack.getFlower().getSepalLength()
+                                ==
+                                flower.getSepalLength())
+                        &&
+                        (pack.getFlower().getPrice()
+                                ==
                                 flower.getPrice())) {
                     ans.add(pack);
                 }
@@ -33,7 +38,7 @@ public class Store {
         return ans;
     }
 
-    public boolean search_bool(Flower flower) {
+    public boolean searchBool(Flower flower) {
         return !this.search(flower).isEmpty();
     }
 }

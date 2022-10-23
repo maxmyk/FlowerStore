@@ -62,6 +62,12 @@
         </module>
         <module name="AvoidNestedBlocks"/>
 
+        <module name="MagicNumber">
+            <property name="tokens" value="NUM_DOUBLE, NUM_FLOAT"/>
+            <property name="ignoreNumbers" value="4, 3, 3.0, 1"/>
+            <property name="ignoreFieldDeclaration" value="true"/>
+            <property name="ignoreAnnotation" value="true"/>
+        </module>
 
         <!-- =========================================================================== -->
         <!-- Class design                                                                -->
