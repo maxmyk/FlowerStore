@@ -137,19 +137,13 @@
         <!-- Duplicate code                                                              -->
         <!-- http://checkstyle.sourceforge.net/config_duplicates.html                    -->
         <!-- =========================================================================== -->
-        <module name="StrictDuplicateCode">
-            <property name="min" value="15"/>
-        </module>
+
 
         <!-- =========================================================================== -->
         <!-- Headers                                                                     -->
         <!-- http://checkstyle.sourceforge.net/config_header.html                        -->
         <!-- =========================================================================== -->
-        <module name="Header">
-            <property name="headerFile" value="config/java.header"/>
-            <property name="ignoreLines" value="2, 3, 4"/>
-            <property name="fileExtensions" value="java"/>
-        </module>
+
 
         <!-- =========================================================================== -->
         <!-- Imports                                                                     -->
@@ -171,13 +165,13 @@
         <!-- Javadoc comments                                                            -->
         <!-- http://checkstyle.sourceforge.net/config_javadoc.html                       -->
         <!-- =========================================================================== -->
-        <module name="AtclauseOrder"/>
+
 
         <!-- =========================================================================== -->
         <!-- Metrics                                                                     -->
         <!-- http://checkstyle.sourceforge.net/config_metrics.html                       -->
         <!-- =========================================================================== -->
-        <module name="BooleanExpressionComplexity"/>
+
 
         <!-- =========================================================================== -->
         <!-- Miscellaneous checks                                                        -->
@@ -201,7 +195,7 @@
         <!-- Naming conventions                                                          -->
         <!-- http://checkstyle.sourceforge.net/config_naming.html                        -->
         <!-- =========================================================================== -->
-        <module name="AbbreviationAsWordInName"/>
+
         <!-- MODIFIED TO ALLOW SINGLE LETTER UPPERCASE NAMES     -->
         <!-- MODIFIED TO ALLOW FINAL VARIABLES TO BE ALL UPPER-CASE -->
         <!-- Disallow underscore characters -->
@@ -240,9 +234,6 @@
         <!-- Regexp                                                                      -->
         <!-- http://checkstyle.sourceforge.net/config_regexp.html                        -->
         <!-- =========================================================================== -->
-        <!--        <module name="Regexp">-->
-        <!--            <property name="format" value="// This code is copyrighted"/>-->
-        <!--        </module>-->
 
         <!-- Checks for calls to System.exit(). -->
         <module name="RegexpSinglelineJava">
