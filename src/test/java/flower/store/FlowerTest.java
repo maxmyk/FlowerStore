@@ -42,24 +42,31 @@ public class FlowerTest {
 
     @Test
     public void testStore() {
+        int notAMagicFour = 4;
+        int notAMagicThree = 3;
+        double notAMagicThreeF = 3.0;
         Store s = new Store();
         FlowerBucket a = new FlowerBucket();
-        a.add(new FlowerPack(new Flower(FlowerType.TULIP), 4));
+        a.add(new FlowerPack(new Flower(FlowerType.TULIP), notAMagicFour));
         a.add(new FlowerPack(new Flower(FlowerType.ROSE, 2.0,
-                3.0), 1));
-        a.add(new FlowerPack(new Flower(FlowerType.ROSE), 3));
-        a.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), 4));
+                notAMagicThreeF), 1));
+        a.add(new FlowerPack(new Flower(FlowerType.ROSE), notAMagicThree));
+        a.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), notAMagicFour));
         s.add(a);
         FlowerBucket b = new FlowerBucket();
         b.add(new FlowerPack(new Flower(FlowerType.TULIP), 2));
         b.add(new FlowerPack(new Flower(FlowerType.ROSE, 2.0,
-                3.0), 1));
-        b.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), 3));
+                notAMagicThreeF), 1));
+        b.add(new FlowerPack(new Flower(FlowerType.CHAMOMILE), notAMagicThree));
         s.add(b);
-        Assertions.assertEquals("[FlowerPack(flower=Flower(price=2.0, " +
-                "sepalLength=3.0, color=#FF0000, flowerType=ROSE), " +
-                "amount=1), FlowerPack(flower=Flower(price=2.0, " +
-                "sepalLength=3.0, color=#FF0000, flowerType=ROSE), " +
+        Assertions.assertEquals("[FlowerPack(flower=Flower(price=2.0, "
+                +
+                "sepalLength=3.0, color=#FF0000, flowerType=ROSE), "
+                +
+                "amount=1), FlowerPack(flower=Flower(price=2.0, "
+                +
+                "sepalLength=3.0, color=#FF0000, flowerType=ROSE), "
+                +
                 "amount=1)]", s.search(
                 new Flower(FlowerType.ROSE, 2.0,
                         3.0)).toString());
