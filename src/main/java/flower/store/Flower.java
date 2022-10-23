@@ -11,18 +11,18 @@ public class Flower {
 
     public Flower(FlowerType type) {
         switch (type) {
-            case CHAMOMILE: {
+            case CHAMOMILE:
                 this.setFlowerType(FlowerType.CHAMOMILE);
                 this.setColor(FlowerColor.WHITE);
-            }
-            case TULIP: {
+                break;
+            case TULIP:
                 this.flowerType = FlowerType.TULIP;
                 this.setColor(FlowerColor.BLUE);
-            }
-            case ROSE: {
+                break;
+            case ROSE:
                 this.flowerType = FlowerType.ROSE;
                 this.setColor(FlowerColor.RED);
-            }
+                break;
             default:
                 throw new IllegalStateException("Unexpected value: " + type);
         }
@@ -32,9 +32,9 @@ public class Flower {
         this.flowerType = flType;
     }
 
+    private double price;
     private double sepalLength;
     private FlowerColor color;
-    private double price;
     private FlowerType flowerType;
 
     public String getColor() {
